@@ -1,0 +1,171 @@
+shell is an interface between the unix/linux operating systems
+
+you can backspace by pressing <backspace> <ctrl+backspace> or <ctrl+h>
+sometimes <del> or <ctrl+del> works
+
+pwd = print working directory
+
+man (+ command) = online manual help for command
+man -k (+ keyword) = can locate a command if you give it a keyword
+
+ls = list directory contents 
+ls -l = displays aditional information about a file
+ls -d (directory)
+ls -l (filename[use "*" for wildcard search function])
+ls -a = lists all files, even .hidden files, in a directory
+
+whoami (who am I?) = displays your user ID
+
+who = displays all users currently logged on to the server
+
+date = displays the current time and date
+
+cal = displays a calendar
+cal 2021 = displays a calandar for the selected year
+cal 8 1963 = displays calendar for august of 1963 (selected year and month)
+
+cp <source-file> <destination-file>
+can move multiple files to the last argument in command, provided that it is a directory
+
+cd = change to speciofied directory
+"cd /" returns to root directory
+
+mv (old file name) (new file name) = move to a new name
+
+cat (filename) = display contents of a file
+more (filename) = displays contents of a file if it is larger than 1 page, using space, enter, or b to scroll through
+head -(num) (filename) = displays number of lines from start of file
+tail -(num) (filename) = displays number of lines from start of file
+
+sort (option) (filename) = used to sort contents of a file
+uniq (option) (filename) = used to display only one occurence of identical adjacent lines
+grep (options) (pattern) (filename) = used to display matching patterns within a file
+
+<ctrl> + <c> = cancel a running command
+<ctrl> + <l> = clear the screen and continue editing
+<ctrl> + <u> = undo the command being entered (erase it and start over)
+
+touch (filename1) (filename2) = creates files with names respectively in current directory
+
+argument = any additional information that you give a command
+	an argument that changes the way a commang works is a special argument called an option
+	other commands include filenames, strings of text, numbers or other elements that the command sees
+	in documentation, square brackets ([]) indicate that a command is optional
+
+root = beginning/master directory
+
+pathname = used to specify the location of a file or a directory
+	used when issuing Linux commands
+absolute pathname = location reference starting from root
+	always start with a slash ("/")
+relative pathname = location reference starting from the current directory
+	"." = current directory
+	".." = parent directory
+relative-to-home pathname = location reference starting from your home directory
+	home directories may be located anywhere in the heirarchy
+	each user is assigned a home directory
+	relative-to-home directories start with "~" without a following slash ("/")
+		~youruserID = starts search in your home directory
+		~/otheruserid = subdirectory called "usedid" within YOUR home directory
+
+ambiguous pathnames = permits you to specify a number of files at once
+
+globbing = the process of converting an ambiguous filename into a list of matching file names (performed by the shell)
+
+mkdir directory-name = creates a directory at the path
+you can create multiple directories by including multiple new dir names after mkdir
+-p = creates parent directories leading towards your desired child directory
+
+rmdir = removes directory at specified path
+-r = removes at path even if file is not empty
+-i = asks for user prompt for each dir to be removed
+rm = remove at path
+
+find dir filename = searchec for file starting from path in all directories descending from specified path
+(order must be "find" + "path" + options)
+-name bob = searches for a file named bob
+-delete = deletes found files
+-empty = finds empty files
+-size +100M = finds files larger than 100 megabytes
+-mmin -5 = finds files updated less than 5 mins ago
+-user mike = finds files belonging to user mike
+
+
+
+
+**3 TYPES OF ARGUMENTS**
+-Positional Arguments
+	are expected to appear in a certain sequence; generally tell the command what it is to operate upon
+-Simple Options
+	are arguments which modify the way in which a command operates
+	usually start with dash or double-dash
+	options generally do not interfere with positional arguments
+	options must oftehn be specified before positional arguments
+-Options with a Value
+	lets you specify details of how you want a command's operation to be changed
+	like an option combined with a positional argument
+
+**UNIX FILESYSTEM HEIRARCHY**
+Directories = actual files that are used to store other files
+allows storagedevice to be organized and prevent confusion
+all directories are related to the root directory (contained directly or indirectly)
+sub-directory = a directory file DIRECTLY contained within a "parent" directory (AKA a "child directory")
+parent-directory = a directory that contains one or more child directories
+
+-Unix file heirarchies:
+	•there are no drive letters. all disk drives are mounted into a single heirarchy
+	•files dont necesarily need a file extension
+
+File Naming
+	•file mames can range from 14 to 255 characters
+	•a periot (".") before a filename hides the file
+	•all filenames are case sensitive
+
+wildcard symbols for ambiguous pathways:
+"*" = matches zero or more of any character
+	* - matches all non-hidden file names
+	x*y - matches filenames starting with x pattern and ending with y pattern
+	*x - matches all filenames ending with x pattern (can be used for file extensions)
+"?" = matches exactly one of any character
+	? - matches all one character filenames except for "."
+	x?y - matches filenames starting with x pattern and ending with y pattern seperated by 1 character for every "?" used
+	?x - matches filenames ending with x pattern, following one character
+"[class]" = matches exactly one character from the class
+	[xy] - matches filenames with either x pattern or y pattern
+	x[y.num-z.num] - matches all filenames starting with x pattern and ending with a number in range of y to z
+	**ADING THE "!" SIGN BEFORE A CLASS WILL FIND ALL FILENAMES EXCEPT FOR THOSE IN THAT CLASS
+
+**TEXT EDITING**
+Visual Editor = vi
+command mode
+	•user presses letters for a command
+input mode
+	•allows user to input and edit text to the file, pressing <esc> to return to command mode
+last-line mode
+	•pressing ":" opens a prompt at the bottom of the screen to use more complex commands within vi
+vi filename = opens a text file for editing in the command line
+using the vi command starts the user in command mode
+once in vi, the user can use "i,I,a,A,o,O" to enter edit/insert mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
