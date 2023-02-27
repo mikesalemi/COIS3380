@@ -32,8 +32,8 @@ tFile openReadFile(char *file) {
 tFile createWriteFile(tFile rf) {
     tFile wf = {}; // creates empty object
     wf = getNewFilename(rf, wf); // function call to get new file name from old filename
-    wf.fileNum = open(wf.fileName, O_CREAT | O_RDWR, 00700);
-    printf("\t%s reversed.\n", rf.fileName);
+    wf.fileNum = open(wf.fileName, O_CREAT | O_RDWR, 00744);
+    printf("\t%s reversed and saved as %s.\n", rf.fileName, wf.fileName);
     return wf; // new file created to hold reversed data from read file
 }
 

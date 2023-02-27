@@ -12,9 +12,9 @@
 |    placed in working directory. Program works to reverse any file type, including
 |    txt, png, jpg, pdf...
 |
-| Compilation: gcc -o revarsalTool fileReversing_main.c reverseFileData.c
+| Compilation: gcc -o reverser fileReversing_main.c reverseFileData.c
 |
-| Program Call: reversalTool file1 file2 file3
+| Program Call: reverser file1 file2 file3
 |
 | Required Includes:
 |   reverseFileData.h
@@ -28,6 +28,7 @@
 #include "reverseFileData.h"
 
 int main(int argc, char *argv[]) {
+    int exitCode = 0; // if any argument file can not be opened, main function returns 1
     tFile fileRead /*file to be read for reversing*/, reversedFile /*reversed version of fileRead*/;
 
     int i; // iterator in for-loop
@@ -38,6 +39,8 @@ int main(int argc, char *argv[]) {
             if (fileRead.fileNum > 0) {
                 reversedFile = createReversedTextFile(fileRead); // reverses original file
                 createReversedTextFile(reversedFile); // reverses reversed file, should match original file
+            } else {
+                exitCode = 1;
             }
         }
     } else {
@@ -45,5 +48,5 @@ int main(int argc, char *argv[]) {
         printf("EXIT_ERROR: No command line arguments given to program call.\n");
     }
 
-    return 0;
+    return exitCode;
 }
