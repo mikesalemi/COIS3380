@@ -29,7 +29,6 @@ void set_opts(int argc, char *argv[], ls_fields *fields) {
             case 'o':
                 if (optind < argc && isNumber(argv[optind])) {  // check if optind is valid and is a number
                     fields->o_val = atoi(argv[optind]);         // saves option value to fields as int
-                    // printf("%c -> %d\n", opt, fields->o_val);
                     fields->o_opt++;  // increments if value was given
                 } else {
                     printf("Invalid parameter \"%s\" after -%c option.\n", argv[optind], opt);  // error for invalid value after option
@@ -39,7 +38,6 @@ void set_opts(int argc, char *argv[], ls_fields *fields) {
             case 'y':
                 if (isNumber(argv[optind]) && optind < argc) {  // check if optind is valid and is a number
                     fields->y_val = atoi(argv[optind]);         // saves option value to fields as int
-                    // printf("%c -> %s\n", opt, argv[optind]);
                     fields->y_opt++;  // increments if value was given
                 } else {
                     printf("Invalid parameter \"%s\" after -%c option.\n", argv[optind], opt);  // error for invalid value after option
@@ -50,7 +48,6 @@ void set_opts(int argc, char *argv[], ls_fields *fields) {
             case 'l':
                 if (isNumber(argv[optind]) && optind < argc) {  // check if optind is valid and is a number
                     fields->l_val = atoi(argv[optind]);         // saves option value to fields as int
-                    // printf("%c -> %s\n", opt, argv[optind]);
                     fields->l_opt++;  // increments if value was given
                 } else {
                     printf("Invalid parameter \"%s\" after -%c option.\n", argv[optind], opt);  // error for invalid value after option
@@ -60,7 +57,6 @@ void set_opts(int argc, char *argv[], ls_fields *fields) {
             case 's':
                 if (isNumber(argv[optind]) && optind < argc) {  // check if optind is valid and is a number
                     fields->s_val = atoi(argv[optind]);         // saves option value to fields as int
-                    // printf("%c -> %d\n", opt, fields->s_val);
                     fields->s_opt++;  // increments if value was given
                 } else {
                     printf("Invalid parameter \"%s\" after -%c option.\n", argv[optind], opt);  // error for invalid value after option

@@ -1,0 +1,104 @@
+[michaelsalemi@loki Lab3]$ gcc -o myls -Wall myls_main.c ls_helpers.c
+[michaelsalemi@loki Lab3]$ ./myls /home/COIS/3380/lab3/badDir
+Directory "/home/COIS/3380/lab3/badDir" does not exist.
+[michaelsalemi@loki Lab3]$ ./myls -y badOpt /home/COIS/3380/lab3
+Invalid parameter "badOpt" after -y option.
+[michaelsalemi@loki Lab3]$ ./myls /home/COIS/3380/lab3
+filecount=21
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+-rwxr-xr-x  1838607            jacques        cois3380    2022-04-17 17:09:30      20675 arasaurolopus_baby.pdf
+-rwxr-xr-x  1838625            jacques        cois3380    2017-02-01 07:07:25       3093 string_testing.c
+-rwxr-xr-x  1838619            jacques        cois3380    2017-07-30 11:44:47   16436089 lab3_dir.tar.gz
+-rwxr-xr-x  1838315            jacques        cois3380    2016-01-26 10:53:18       6915 3_range_random.c
+-rwxr-xr-x  1838313            jacques        cois3380    2016-01-26 09:58:24       1832 1_test_random.c
+drwxr-xr-x  1838616            jacques        cois3380    2022-04-07 08:46:13       4096 gnuplot
+-rwxr-xr-x  1838314            jacques        cois3380    2016-01-26 09:58:24       2879 2_seed_random.c
+-rwxr-xr-x  1838620            jacques        cois3380    2022-04-17 17:09:20     408606 poke1.jpg
+-rwxr-xr-x  1838622            jacques        cois3380    2016-01-21 10:43:52      22434 Shell_file_processing.pdf
+-rwxr-xr-x  1838618            jacques        cois3380    2017-07-25 11:23:57        616 lab2_textfile.txt
+-rwxr-xr-x  1838626            jacques        cois3380    2016-12-09 10:17:00     213904 visual_Studio_Community.exe
+-rwxr-xr-x  1838614            jacques        cois3380    2017-01-20 12:38:49        559 cities_short.csv
+-rwxr-xr-x  1838613            jacques        cois3380    2017-01-20 12:38:49    6477803 cities_all.csv
+-rwxr-xr-x  1838624            jacques        cois3380    2000-02-21 18:21:40      36019 stegosau.pdf
+-rwxr-xr-x  1838612            jacques        cois3380    1987-12-06 16:21:52      40102 CALCOMP.ARC
+-rwxr-xr-x  1838621            jacques        cois3380    2022-04-17 17:10:59    1273576 putty.exe
+-rwxr-xr-x  1838627            jacques        cois3380    2017-02-04 15:12:29    9043232 WinSCP-5.9.3-Setup.exe
+-rwxr-xr-x  1838615            jacques        cois3380    2000-02-21 18:24:00      87489 diplodocus.pdf
+-rwxr-xr-x  1838623            jacques        cois3380    2022-09-26 11:47:21       1921 small_world.txt
+-rwxr-xr-x  1838617            jacques        cois3380    2022-04-17 17:09:10      46903 jewel.jpg
+-rwxr-xr-x  1838611            jacques        cois3380    1980-01-01 00:01:28       1179 C128.XTK
+
+[michaelsalemi@loki Lab3]$ ./myls -o 4000 /home/COIS/3380/lab3
+filecount=4
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+-rwxr-xr-x  1838624            jacques        cois3380    2000-02-21 18:21:40      36019 stegosau.pdf
+-rwxr-xr-x  1838612            jacques        cois3380    1987-12-06 16:21:52      40102 CALCOMP.ARC
+-rwxr-xr-x  1838615            jacques        cois3380    2000-02-21 18:24:00      87489 diplodocus.pdf
+-rwxr-xr-x  1838611            jacques        cois3380    1980-01-01 00:01:28       1179 C128.XTK
+
+[michaelsalemi@loki Lab3]$ ./myls -y 4000 /home/COIS/3380/lab3
+filecount=17
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+-rwxr-xr-x  1838607            jacques        cois3380    2022-04-17 17:09:30      20675 arasaurolopus_baby.pdf
+-rwxr-xr-x  1838625            jacques        cois3380    2017-02-01 07:07:25       3093 string_testing.c
+-rwxr-xr-x  1838619            jacques        cois3380    2017-07-30 11:44:47   16436089 lab3_dir.tar.gz
+-rwxr-xr-x  1838315            jacques        cois3380    2016-01-26 10:53:18       6915 3_range_random.c
+-rwxr-xr-x  1838313            jacques        cois3380    2016-01-26 09:58:24       1832 1_test_random.c
+drwxr-xr-x  1838616            jacques        cois3380    2022-04-07 08:46:13       4096 gnuplot
+-rwxr-xr-x  1838314            jacques        cois3380    2016-01-26 09:58:24       2879 2_seed_random.c
+-rwxr-xr-x  1838620            jacques        cois3380    2022-04-17 17:09:20     408606 poke1.jpg
+-rwxr-xr-x  1838622            jacques        cois3380    2016-01-21 10:43:52      22434 Shell_file_processing.pdf
+-rwxr-xr-x  1838618            jacques        cois3380    2017-07-25 11:23:57        616 lab2_textfile.txt
+-rwxr-xr-x  1838626            jacques        cois3380    2016-12-09 10:17:00     213904 visual_Studio_Community.exe
+-rwxr-xr-x  1838614            jacques        cois3380    2017-01-20 12:38:49        559 cities_short.csv
+-rwxr-xr-x  1838613            jacques        cois3380    2017-01-20 12:38:49    6477803 cities_all.csv
+-rwxr-xr-x  1838621            jacques        cois3380    2022-04-17 17:10:59    1273576 putty.exe
+-rwxr-xr-x  1838627            jacques        cois3380    2017-02-04 15:12:29    9043232 WinSCP-5.9.3-Setup.exe
+-rwxr-xr-x  1838623            jacques        cois3380    2022-09-26 11:47:21       1921 small_world.txt
+-rwxr-xr-x  1838617            jacques        cois3380    2022-04-17 17:09:10      46903 jewel.jpg
+
+[michaelsalemi@loki Lab3]$ ./myls -y 4000 -o 1000 /home/COIS/3380/lab3
+filecount=11
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+-rwxr-xr-x  1838625            jacques        cois3380    2017-02-01 07:07:25       3093 string_testing.c
+-rwxr-xr-x  1838619            jacques        cois3380    2017-07-30 11:44:47   16436089 lab3_dir.tar.gz
+-rwxr-xr-x  1838315            jacques        cois3380    2016-01-26 10:53:18       6915 3_range_random.c
+-rwxr-xr-x  1838313            jacques        cois3380    2016-01-26 09:58:24       1832 1_test_random.c
+-rwxr-xr-x  1838314            jacques        cois3380    2016-01-26 09:58:24       2879 2_seed_random.c
+-rwxr-xr-x  1838622            jacques        cois3380    2016-01-21 10:43:52      22434 Shell_file_processing.pdf
+-rwxr-xr-x  1838618            jacques        cois3380    2017-07-25 11:23:57        616 lab2_textfile.txt
+-rwxr-xr-x  1838626            jacques        cois3380    2016-12-09 10:17:00     213904 visual_Studio_Community.exe
+-rwxr-xr-x  1838614            jacques        cois3380    2017-01-20 12:38:49        559 cities_short.csv
+-rwxr-xr-x  1838613            jacques        cois3380    2017-01-20 12:38:49    6477803 cities_all.csv
+-rwxr-xr-x  1838627            jacques        cois3380    2017-02-04 15:12:29    9043232 WinSCP-5.9.3-Setup.exe
+
+[michaelsalemi@loki Lab3]$ ./myls -y 4000 -o 1000 -l 20000 /home/COIS/3380/lab3
+filecount=5
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+-rwxr-xr-x  1838619            jacques        cois3380    2017-07-30 11:44:47   16436089 lab3_dir.tar.gz
+-rwxr-xr-x  1838622            jacques        cois3380    2016-01-21 10:43:52      22434 Shell_file_processing.pdf
+-rwxr-xr-x  1838626            jacques        cois3380    2016-12-09 10:17:00     213904 visual_Studio_Community.exe
+-rwxr-xr-x  1838613            jacques        cois3380    2017-01-20 12:38:49    6477803 cities_all.csv
+-rwxr-xr-x  1838627            jacques        cois3380    2017-02-04 15:12:29    9043232 WinSCP-5.9.3-Setup.exe
+
+[michaelsalemi@loki Lab3]$ ./myls -y 4000 -o 1000 -l 20000 -s 900000 /home/COIS/3380/lab3
+filecount=2
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+-rwxr-xr-x  1838622            jacques        cois3380    2016-01-21 10:43:52      22434 Shell_file_processing.pdf
+-rwxr-xr-x  1838626            jacques        cois3380    2016-12-09 10:17:00     213904 visual_Studio_Community.exe
+
+[michaelsalemi@loki Lab3]$ ./myls
+filecount=5
+
+Permission    inode                UID             GID      Mod-Date     Time       Size Filename
+drwxrwxr-x  1447600      michaelsalemi   michaelsalemi    2023-02-28 13:11:24       4096 poop
+-rw-rw-r--  1447458      michaelsalemi   michaelsalemi    2023-02-28 13:13:07      11325 ls_helpers.c
+-rw-rw-r--  1447532      michaelsalemi   michaelsalemi    2023-02-28 13:26:12       2376 main.c
+-rw-rw-r--  1447538      michaelsalemi   michaelsalemi    2023-02-28 13:18:40       4901 ls_helpers.h
+-rwxrwxr-x  1447234      michaelsalemi   michaelsalemi    2023-02-28 13:26:20      13992 myls

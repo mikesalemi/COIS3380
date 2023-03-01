@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="loki.trentu.ca" id="d48b2b9b-de38-42ce-8ed4-5d633cc36a8c" keyPath="C:\Users\micha\OneDrive\Desktop\School\Winter 2023\Systems Programming - COIS 3380\new_privateKey.ppk" port="22" nameFormat="DESCRIPTIVE" username="michaelsalemi" useOpenSSHConfig="true" />
-    </configs>
-  </component>
-</project>
