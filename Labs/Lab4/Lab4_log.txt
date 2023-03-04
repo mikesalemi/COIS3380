@@ -1,0 +1,54 @@
+[michaelsalemi@loki Lab4]$ gcc -Wall -o MikeShell myshell_main.c myshell_functions.c
+[michaelsalemi@loki Lab4]$ ./MikeShell
+############################
+##------------------------##
+##--Welcome to MikeShell--##
+##------------------------##
+############################
+
+[michaelsalemi]-> help
+la                  -Prints data of all files in current directory
+mention [option]    -Searches all files in directory recursively for option.
+                        \Mandatory option must be a directory path.
+urun [option]       -Displays all processes currently running by user or self.
+                        \If given, option must be username. Otherwise, current
+                        \user is used.
+time                -Displays current time.
+clear               -Clears screen
+usize [option]      -Gives the size of the users home directory.
+                        \If given, option must be username. Otherwise, current
+                        \user is used.
+help                -Displays description of all commands.
+bye                 -Terminates shell.
+[michaelsalemi]-> la
+total 44
+drwxrwxr-x. 2 michaelsalemi michaelsalemi  4096 Mar  2 22:26 .
+drwxrwxr-x. 7 michaelsalemi michaelsalemi  4096 Mar  2 11:06 ..
+-rwxrwxr-x. 1 michaelsalemi michaelsalemi 13504 Mar  2 22:26 MikeShell
+-rw-rw-r--. 1 michaelsalemi michaelsalemi  5849 Mar  2 22:26 myshell_functions.c
+-rw-rw-r--. 1 michaelsalemi michaelsalemi   512 Mar  2 22:13 myshell_functions.h
+-rw-rw-r--. 1 michaelsalemi michaelsalemi  2221 Mar  2 22:13 myshell_main.c
+-rw-rw-r--. 1 michaelsalemi michaelsalemi   830 Mar  2 21:39 rooster.txt
+[michaelsalemi]-> mention rooster
+rooster.txt:Here they come to snuff the rooster
+rooster.txt:Yeah, here come the rooster
+rooster.txt:Here they come to snuff the rooster, ah yeah
+rooster.txt:Yeah, here come the rooster, yeah
+rooster.txt:Here they come to snuff the rooster
+rooster.txt:Yeah, here come the rooster, yeah
+[michaelsalemi]-> urun
+  PID TTY          TIME CMD
+ 6554 ?        00:00:01 sshd
+ 6555 ?        00:00:00 sshd
+ 6556 ?        00:00:00 sshd
+11064 pts/22   00:00:00 bash
+14768 ?        00:00:01 sshd
+14769 ?        00:00:00 sftp-server
+28985 pts/22   00:00:00 MikeShell
+29137 pts/22   00:00:00 ps
+[michaelsalemi]-> time
+22:27:48
+[michaelsalemi]-> usize
+18M     /home/michaelsalemi
+[michaelsalemi]-> bye
+Exiting shell...
