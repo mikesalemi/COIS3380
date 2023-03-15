@@ -7,8 +7,7 @@
 #include "myshell_functions.h"
 
 int main() {
-    // char *cmd[] = {"help", "la", "time", "mention", "urun", "usize"};
-    // int commands_amount = 6;
+
     char command[20], option[20];  // option is first part of input, option is rest of input
     int running = 1;               // flag for program exit
 

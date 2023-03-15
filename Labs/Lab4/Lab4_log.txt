@@ -1,5 +1,5 @@
-[michaelsalemi@loki Lab4]$ gcc -Wall -o MikeShell myshell_main.c myshell_functions.c
-[michaelsalemi@loki Lab4]$ ./MikeShell
+[michaelsalemi@loki Lab4]$ gcc -o MiSh -Wall myshell_main.c myshell_functions.c
+[michaelsalemi@loki Lab4]$ ./MiSh
 ############################
 ##------------------------##
 ##--Welcome to MikeShell--##
@@ -21,34 +21,54 @@ usize [option]      -Gives the size of the users home directory.
 help                -Displays description of all commands.
 bye                 -Terminates shell.
 [michaelsalemi]-> la
-total 44
-drwxrwxr-x. 2 michaelsalemi michaelsalemi  4096 Mar  2 22:26 .
+total 60
+drwxrwxr-x. 2 michaelsalemi michaelsalemi  4096 Mar  8 19:28 .
 drwxrwxr-x. 7 michaelsalemi michaelsalemi  4096 Mar  2 11:06 ..
--rwxrwxr-x. 1 michaelsalemi michaelsalemi 13504 Mar  2 22:26 MikeShell
--rw-rw-r--. 1 michaelsalemi michaelsalemi  5849 Mar  2 22:26 myshell_functions.c
+-rwxrwxr-x. 1 michaelsalemi michaelsalemi 13504 Mar  2 22:28 MikeShell
+-rwxrwxr-x. 1 michaelsalemi michaelsalemi 13504 Mar  8 19:28 MiSh
+-rw-rw-r--. 1 michaelsalemi michaelsalemi  6259 Mar  8 19:27 myshell_functions.c
 -rw-rw-r--. 1 michaelsalemi michaelsalemi   512 Mar  2 22:13 myshell_functions.h
 -rw-rw-r--. 1 michaelsalemi michaelsalemi  2221 Mar  2 22:13 myshell_main.c
 -rw-rw-r--. 1 michaelsalemi michaelsalemi   830 Mar  2 21:39 rooster.txt
+[michaelsalemi]-> mention
+'mention' must include a parameter. Try 'help' for more information.
 [michaelsalemi]-> mention rooster
+Finding: rooster
 rooster.txt:Here they come to snuff the rooster
 rooster.txt:Yeah, here come the rooster
 rooster.txt:Here they come to snuff the rooster, ah yeah
 rooster.txt:Yeah, here come the rooster, yeah
 rooster.txt:Here they come to snuff the rooster
 rooster.txt:Yeah, here come the rooster, yeah
-[michaelsalemi]-> urun
+[michaelsalemi]-> urun jacques
+Showing processes for: jacques
   PID TTY          TIME CMD
- 6554 ?        00:00:01 sshd
- 6555 ?        00:00:00 sshd
- 6556 ?        00:00:00 sshd
-11064 pts/22   00:00:00 bash
-14768 ?        00:00:01 sshd
-14769 ?        00:00:00 sftp-server
-28985 pts/22   00:00:00 MikeShell
-29137 pts/22   00:00:00 ps
+17509 ?        00:00:00 sshd
+17510 pts/16   00:00:00 bash
+[michaelsalemi]-> urun
+Showing processes for: michaelsalemi
+  PID TTY          TIME CMD
+ 3193 ?        00:00:00 sshd
+ 3487 ?        00:00:00 sshd
+ 3583 ?        00:00:00 sshd
+ 3585 pts/3    00:00:00 bash
+ 4181 ?        00:00:00 sshd
+ 4182 ?        00:00:00 sftp-server
+ 6027 ?        00:00:00 sftp-server
+ 7068 pts/3    00:00:00 MiSh
+ 7107 pts/3    00:00:00 ps
+25343 ?        00:00:00 sshd
 [michaelsalemi]-> time
-22:27:48
+19:28:44
 [michaelsalemi]-> usize
-18M     /home/michaelsalemi
+Showing home directory size for: michaelsalemi
+22M     /home/michaelsalemi
+[michaelsalemi]-> usize michaelsalemi
+Showing home directory size for: michaelsalemi
+22M     /home/michaelsalemi
+[michaelsalemi]-> badcommand
+Invalid command. Try "help".
 [michaelsalemi]-> bye
 Exiting shell...
+
+[michaelsalemi@loki Lab4]$

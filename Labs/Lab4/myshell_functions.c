@@ -57,7 +57,8 @@ Description: calls grep on all files recursively in current directory and return
              lines and files with the option text found within.
 */
 void mention(char *option) {
-    if (strlen(option) != 0) {                                                                 // if option is not an empty string
+    if (strlen(option) != 0) {  // if option is not an empty string
+        printf("Finding: %s\n", option);
         char text[200];                                                                        // buffer for grep search text
         text[0] = '\"';                                                                        // first quotation
         strcat(text, option);                                                                  // add user input to search text
@@ -73,9 +74,11 @@ urun(char *option)
 Description: Displays all running processes running by user, and if given by specified user option.
 */
 void urun(char *option) {
-    if (strlen(option) == 0) {                     // if option is an empty string
+    if (strlen(option) == 0) {  // if option is an empty string
+        printf("Showing processes for: %s\n", username);
         execlp("ps", "ps", "-u", username, NULL);  // run ps command with option -u and current user
     } else {
+        printf("Showing processes for: %s\n", option);
         execlp("ps", "ps", "-u", option, NULL);  // run ps command with -u and given username
     }
 }
@@ -111,9 +114,14 @@ usize(char *option)
 Description: prints size of home directory of either currentuser or username given in option.
 */
 void usize(char *option) {
-    if (strlen(option) == 0) {                                   // if option is an empty string
+    if (strlen(option) == 0) {       // if option is an empty string
+        char userhome[30];           // buffer for specified users home directory
+        strcpy(userhome, "/home/");  // start with "/home/"
+        strcat(userhome, username);    // then add specified user for home directory
+        printf("Showing home directory size for: %s\n", username);
         execlp("du", "du", "-sh", "/home/michaelsalemi", NULL);  // du command with -sh option and current user's home
     } else {
+        printf("Showing home directory size for: %s\n", option);
         char userhome[30];                          // buffer for specified users home directory
         strcpy(userhome, "/home/");                 // start with "/home/"
         strcat(userhome, option);                   // then add specified user for home directory
