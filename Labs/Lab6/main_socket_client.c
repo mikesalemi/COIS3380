@@ -46,7 +46,6 @@ int main(int argc, char const *argv[]) {
         send(socket_desc, "", 0, 0);
         printf("\t> ");
         scanf(" %1023[^\n]", datastream.data);
-        // datastream.data[strlen(datastream.data) - 1] = '\0';
         datastream.nbytes = strlen(datastream.data);
         printf("%s=%d\n", datastream.data, datastream.nbytes);
         if (strncmp(datastream.data, "bye", 3)) {

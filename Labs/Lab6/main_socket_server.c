@@ -79,10 +79,7 @@ int main(int argc, char const *argv[]) {
                     kill(getppid(), SIGUSR1);
                     kill(getpid(), SIGQUIT);
                 } else {
-                    // printf("Parent waiting\n");
-                    // wait(NULL);
                     close(newfd);
-                    // printf("Parent done waiting\n");
                 }
             }
         } else {
