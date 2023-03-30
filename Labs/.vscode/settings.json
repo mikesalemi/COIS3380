@@ -3,7 +3,8 @@
         "*.embeddedhtml": "html",
         "stat.h": "c",
         "unistd.h": "c",
-        "atomic": "c"
+        "atomic": "c",
+        "socket_packet_struct.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
