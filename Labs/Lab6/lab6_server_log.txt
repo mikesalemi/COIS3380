@@ -1,0 +1,58 @@
+[michaelsalemi@loki Lab6]$ gcc -Wall -o server main_socket_server.c
+[michaelsalemi@loki Lab6]$ ./server
+
+-------------------
+| *SERVER ACTIVE* |
+-------------------
+
+***New Made: 4
+***Current connections: 1
+
+Receiving file 'poke1.jpg'...
+poke1.jpg copied
+***File upload success. Disconnected from client.
+
+***Current connections: 0
+
+
+***New Made: 4
+***Current connections: 1
+
+Receiving file 'diplodocus.pdf'...
+diplodocus.pdf copied
+***File upload success. Disconnected from client.
+
+***Current connections: 0
+
+
+***New Made: 4
+***Current connections: 1
+
+Receiving file 'small_world.txt'...
+small_world.txt copied
+***File upload success. Disconnected from client.
+
+***Current connections: 0
+
+
+***New Made: 4
+***Current connections: 1
+
+Receiving file 'putty.exe'...
+putty.exe copied
+***File upload success. Disconnected from client.
+
+***Current connections: 0
+
+
+***New Made: 4
+***Current connections: 1
+
+Receiving file 'putty.exe'...
+putty_2.exe created
+***File upload success. Disconnected from client.
+
+***Current connections: 0
+
+^C Terminating Server
+[michaelsalemi@loki Lab6]$

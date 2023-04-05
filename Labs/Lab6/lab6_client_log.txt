@@ -1,0 +1,67 @@
+[michaelsalemi@loki lab3]$ cd ~/3380/Labs/Lab6
+[michaelsalemi@loki Lab6]$ gcc -Wall -o client main_socket_client.c
+[michaelsalemi@loki ~]$ cd /home/COIS/3380/lab3
+[michaelsalemi@loki lab3]$ upload poke1.jpg
+Sending file poke1.jpg...
+Done sending file.
+
+SERVER MESSAGE:
+        ***FILE UPLOAD SUCCESSFUL***
+
+Goodbye!
+
+[michaelsalemi@loki lab3]$ upload diplodocus.pdf
+Sending file diplodocus.pdf...
+Done sending file.
+
+SERVER MESSAGE:
+        ***FILE UPLOAD SUCCESSFUL***
+
+Goodbye!
+
+[michaelsalemi@loki lab3]$ upload small_world.txt
+Sending file small_world.txt...
+Done sending file.
+
+SERVER MESSAGE:
+        ***FILE UPLOAD SUCCESSFUL***
+
+Goodbye!
+
+[michaelsalemi@loki lab3]$ upload putty.exe
+Sending file putty.exe...
+Done sending file.
+
+SERVER MESSAGE:
+        ***FILE UPLOAD SUCCESSFUL***
+
+Goodbye!
+
+[michaelsalemi@loki lab3]$ upload putty.exe
+Sending file putty.exe...
+Done sending file.
+
+SERVER MESSAGE:
+        ***FILE UPLOAD SUCCESSFUL***
+
+Goodbye!
+
+[michaelsalemi@loki lab3]$ cd ~/3380/Labs/Lab6
+[michaelsalemi@loki Lab6]$ md5sum putty.exe
+b3bb91ad96f2d4c041861ce59ba6ac73  putty.exe
+[michaelsalemi@loki Lab6]$ md5sum putty_2.exe
+b3bb91ad96f2d4c041861ce59ba6ac73  putty_2.exe
+[michaelsalemi@loki Lab6]$ md5sum /home/COIS/3380/lab3/putty.exe
+b3bb91ad96f2d4c041861ce59ba6ac73  /home/COIS/3380/lab3/putty.exe
+[michaelsalemi@loki Lab6]$ md5sum poke1.jpg
+b16971fcf6442e27303d64fbc3a3ddd8  poke1.jpg
+[michaelsalemi@loki Lab6]$ md5sum /home/COIS/3380/lab3/poke1.jpg
+b16971fcf6442e27303d64fbc3a3ddd8  /home/COIS/3380/lab3/poke1.jpg
+[michaelsalemi@loki Lab6]$ md5sum diplodocus.pdf
+856c76c86d03ac062786d660c326719b  diplodocus.pdf
+[michaelsalemi@loki Lab6]$ md5sum /home/COIS/3380/lab3/diplodocus.pdf
+856c76c86d03ac062786d660c326719b  /home/COIS/3380/lab3/diplodocus.pdf
+[michaelsalemi@loki Lab6]$ md5sum small_world.txt
+9fd8213663918961f962f192c7b4d1f0  small_world.txt
+[michaelsalemi@loki Lab6]$ md5sum /home/COIS/3380/lab3/small_world.txt
+9fd8213663918961f962f192c7b4d1f0  /home/COIS/3380/lab3/small_world.txt
